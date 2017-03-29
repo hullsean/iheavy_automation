@@ -22,7 +22,7 @@
 	"wpackagist-plugin/feedburner-plugin":"1.48",
         "wpackagist-theme/hueman":"*",
 	"php": ">=5.3",
-	"johnpbloch/wordpress": "4.6.1"
+	"johnpbloch/wordpress": "4.7.3"
     },
     "autoload": {
         "psr-0": {
