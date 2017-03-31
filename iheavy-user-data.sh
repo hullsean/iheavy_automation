@@ -65,5 +65,5 @@ mv wp-config.php /var/www/html
 service httpd restart
 
 # allow apache to create uploads & any files inside wp-content
-chown apache /var/www/html/wp-content
+chown -R apache /var/www/html/wp-content
 
