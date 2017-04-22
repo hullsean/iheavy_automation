@@ -34,8 +34,11 @@ php composer-setup.php
 php -r "unlink('composer-setup.php');"
 mv composer.phar /usr/local/bin/composer
 
+# test composer install
+command -v composer >/dev/null 2>&1 || { echo "We need composer but it's not installed.  Aborting." >&2; exit 1; }
 
 # fetch config files from private S3 folder
+# need to fetch from git
 aws s3 cp s3://bucket-config/iheavy_files.zip .
 
 # unzip files
