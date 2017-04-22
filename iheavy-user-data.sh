@@ -35,7 +35,11 @@ php -r "unlink('composer-setup.php');"
 mv composer.phar /usr/local/bin/composer
 
 # test composer install
-command -v composer >/dev/null 2>&1 || { echo "We need composer but it's not installed.  Aborting." >&2; exit 1; }
+if ! [ -x "$(command -v composer)" ]; then
+  echo 'Error: composer is not installed.' >&2
+  exit 1
+fi
+
 
 # fetch config files from private S3 folder
 # need to fetch from git
