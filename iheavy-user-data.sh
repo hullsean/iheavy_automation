@@ -1,5 +1,6 @@
 #!/bin/sh
 
+# still working on the final list here
 yum update -y
 yum install emacs -y
 yum install mysql -y
@@ -50,6 +51,8 @@ unzip iheavy_files.zip
 
 # use composer to get wordpress & plugins
 composer update
+
+# check for existing wordpress & wp-content folders??
 
 # move wordpress software
 mv wordpress/* /var/www/html/
