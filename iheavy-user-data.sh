@@ -21,7 +21,8 @@ chkconfig httpd on
 echo "[client]" >> /root/.my.cnf
 echo "host=aaa-rds.cccwwkkjjjff.us-east-1.rds.amazonaws.com" >> /root/.my.cnf
 echo "user=root" >> /root/.my.cnf
-echo "password=abc123" >> /root/.my.cnf
+# need to fetch this secret from s3 or server variable
+#echo "password=xxxxx" >> /root/.my.cnf
 
 
 # install composer for php dependencies
