@@ -17,22 +17,18 @@ yum install -y httpd24
 service httpd start
 chkconfig httpd on
 
-# setup mysql login
-echo "[client]" >> /root/.my.cnf
-echo "host=aaa-rds.cccwwkkjjjff.us-east-1.rds.amazonaws.com" >> /root/.my.cnf
-echo "user=root" >> /root/.my.cnf
-# need to fetch this secret from s3 or server variable
-#echo "password=xxxxx" >> /root/.my.cnf
-
-
 # install composer for php dependencies
-export COMPOSE_HOME=/root
+export COMPOSER_HOME=/root
 
+cd /root
+
+# this fixes the composer install.
+# we also put it in /usr/bin where it's found in the path
 echo "installing composer..."
-php -r "copy('https://getcomposer.org/installer', 'composer-setup.php');"
+wget https://getcomposer.org/installer
+mv installer composer-setup.php
 php composer-setup.php
-php -r "unlink('composer-setup.php');"
-mv composer.phar /usr/local/bin/composer
+mv composer.phar /usr/bin/composer
 
 # test composer install
 if ! [ -x "$(command -v composer)" ]; then
@@ -43,13 +39,13 @@ fi
 
 # fetch config files from private S3 folder
 # need to fetch from git
-aws s3 cp s3://bucket-config/iheavy_files.zip .
+aws s3 cp s3://iheavy-config/iheavy_files.zip .
 
 # unzip files
 unzip iheavy_files.zip 
 
 # use composer to get wordpress & plugins
-composer update
+/usr/bin/composer update
 
 # check for existing wordpress & wp-content folders??
 
