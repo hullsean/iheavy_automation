@@ -1,5 +1,7 @@
 #!/bin/sh
 
+# just adding a comment to test
+# this spins up a new instance to run iheavy.com blog
 aws ec2 run-instances --image-id ami-c58c1dd3 \
   --security-group-ids sg-46f0f223 --count 1 \
   --instance-type t2.small --key-name iheavy \
