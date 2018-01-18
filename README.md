@@ -23,3 +23,4 @@ Steps to Rebuild IHEAVY.COM
 9. check www.newiheavy.com/wp-admin image content 
 ** AFTER TESTING!! **
 10. update EIP configuration on aws dashboard
+11. visit www.iheavy.com and test as above
