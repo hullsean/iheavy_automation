@@ -68,7 +68,28 @@ mv htaccess /var/www/html/.htaccess
 mv iheavy_httpd.conf /etc/httpd/conf.d
 
 # move our wp-config into place
-mv wp-config.php /var/www/html
+#mv wp-config.php /var/www/html
+# build the wp-config.php file
+cat <<EOF > /var/www/html/wp-config.php
+<?php
+
+define('DB_NAME', 'ihi361_new');
+define('DB_USER', "${mysql_user}");
+define('DB_PASSWORD', "${mysql_pass}");
+define('DB_HOST', "${mysql_host}");
+define('DB_CHARSET', 'utf8');
+define('DB_COLLATE', '');
+
+
+\$table_prefix = 'ihi361_';
+
+define('WP_DEBUG', false);
+
+if ( !defined('ABSPATH') )
+define('ABSPATH', dirname(__FILE__) . '/');
+
+require_once(ABSPATH . 'wp-settings.php');
+EOF
 
 # restart apache
 service httpd restart
