@@ -1,0 +1,53 @@
+---
+- hosts: all
+  become: yes
+
+  tasks:
+  - name: install php-dom
+    yum: name=php-dom state=latest
+
+  - name: install aws-cli
+    yum: name=aws-cli state=latest
+
+  - name: install wp-cli
+    shell: curl -O https://raw.githubusercontent.com/wp-cli/builds/gh-pages/phar/wp-cli.phar
+    args:
+      chdir: /root
+      creates: wp-cli.phar
+
+  - cron:
+      name=make_wp_backup 
+      minute=10
+      hour=05
+      weekday=1
+      job="php /root/wp-cli.phar export --path=/var/www/html --dir=/tmp/"
+      state=present
+
+  - cron: 
+      name=copy_wp_backups
+      minute=0 
+      hour=6 
+      weekday=* 
+      job="aws s3 cp /tmp/*.xml s3://ihiwpbackups" 
+      state=present
+
+
+  - lineinfile:
+      dest: /var/www/html/wp-config.php
+      regexp: 'DBI_AWS_ACCESS_KEY_ID'
+      backrefs: no
+      state: present
+      line: "define( \"DBI_AWS_ACCESS_KEY_ID\", \"{{ lookup('env','AS3CF_KEY') }}\" );"
+
+  - lineinfile:
+      dest: /var/www/html/wp-config.php
+      regexp: 'DBI_AWS_SECRET_ACCESS_KEY'
+      backrefs: no
+      state: present
+      line: "define( \"DBI_AWS_SECRET_ACCESS_KEY\", \"{{ lookup('env','AS3CF_SECRET') }}\" );"
+
+  - file:
+      src: /eternalfiles/files/
+      dest: /var/www/html/files
+      state: link
+
