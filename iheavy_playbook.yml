@@ -17,9 +17,9 @@
 
   - cron:
       name=make_wp_backup 
-      minute=10
-      hour=05
-      weekday=1
+      minute=0
+      hour=22
+      weekday=0
       job="php /root/wp-cli.phar export --path=/var/www/html --dir=/tmp/"
       state=present
 
