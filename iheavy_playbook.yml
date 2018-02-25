@@ -51,3 +51,24 @@
       dest: /var/www/html/files
       state: link
 
+
+  - lineinfile:
+      dest: /var/www/html/a_simple_pingdom_test.php
+      regexp: '^\$DB_HOST'
+      backrefs: no
+      state: present
+      line: "$DB_HOST = \"{{ lookup('env','ihi_host') }}\"; "
+
+  - lineinfile:
+      dest: /var/www/html/a_simple_pingdom_test.php
+      regexp: '^\$DB_USER'
+      backrefs: no
+      state: present
+      line: "$DB_USERNAME = \"{{ lookup('env','ihi_user') }}\"; "
+
+  - lineinfile:
+      dest: /var/www/html/a_simple_pingdom_test.php
+      regexp: '^\$DB_PASS'
+      backrefs: no
+      state: present
+      line: "$DB_PASSWORD = \"{{ lookup('env','ihi_pass') }}\"; "
