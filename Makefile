@@ -1,10 +1,15 @@
 .PHONY: all image package dist clean
 
-all: package
+all: provision, configure
 
+test: 
+	terraform plan
 
-package: 
-	./build_iheavy.sh
+provision: 
+	terraform apply
+
+configure:
+	ansible-playbook iheavy_playbook.yml
 
 clean:
 	rm *~
