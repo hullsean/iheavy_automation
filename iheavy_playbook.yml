@@ -15,20 +15,23 @@
       chdir: /root
       creates: wp-cli.phar
 
+  - name: creates wpbackup dir
+    file: path=/tmp/wpbackups state=directory
+
   - cron:
       name=make_wp_backup 
       minute=0
       hour=22
-      weekday=0
-      job="php /root/wp-cli.phar export --path=/var/www/html --dir=/tmp/"
+      weekday=2
+      job="php /root/wp-cli.phar export --path=/var/www/html --dir=/tmp/wpbackups"
       state=present
 
   - cron: 
       name=copy_wp_backups
       minute=0 
-      hour=6 
-      weekday=* 
-      job="aws s3 cp /tmp/*.xml s3://ihiwpbackups" 
+      hour=23 
+      weekday=2 
+      job="aws s3 sync /tmp/wpbackups s3://ihiwpbackups/" 
       state=present
 
 
@@ -50,6 +53,15 @@
       src: /eternalfiles/files/
       dest: /var/www/html/files
       state: link
+
+
+  - file:
+      path: /var/www/html/sitemap.xml
+      owner: apache
+
+  - file:
+      path: /var/www/html/sitemap.xml.gz
+      owner: apache
 
 
   - lineinfile:
