@@ -7,6 +7,11 @@ wpackagist is a repository managing wordpress plugins.
 Required packages & versions in composer.json
 AWS cloud init script in iheavy-user-data.sh
 
+cloud resources provisioned with terraform
+server configuration management with ansible
+
+See Makefile for details.
+
 Did some testing with terraform build via iheavy.tf
 To use the awscli, use the build_iheavy.sh script
 
