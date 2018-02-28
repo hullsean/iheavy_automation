@@ -10,7 +10,8 @@ AWS cloud init script in iheavy-user-data.sh
 cloud resources provisioned with terraform
 server configuration management with ansible
 
-See Makefile for details.
+Makefile includes make test, make provision & make configure
+options.  make all does all of them together.  :)
 
 Did some testing with terraform build via iheavy.tf
 To use the awscli, use the build_iheavy.sh script
