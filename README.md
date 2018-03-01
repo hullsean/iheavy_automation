@@ -31,3 +31,4 @@ TODO
 o add autoscaling group
 o add ELB
 o automate tests
+- might add automated tests using docker.  We'll see!
