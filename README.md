@@ -4,8 +4,12 @@ Basic build scripts for iheavy.com wordpress site.
 Manage wordpress software & module install versions via php composer.
 wpackagist is a repository managing wordpress plugins.
 
-Required packages & versions in composer.json
+
+Required packages & versions in composer.json.  These include all of
+the wordpress plugins currently installed.
+
 AWS cloud init script in iheavy-user-data.sh
+
 
 cloud resources provisioned with terraform
 server configuration management with ansible
