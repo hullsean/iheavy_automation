@@ -11,7 +11,9 @@ the wordpress plugins currently installed.
 AWS cloud init script in iheavy-user-data.sh
 
 
+
 cloud resources provisioned with terraform
+
 server configuration management with ansible
 
 Makefile includes make test, make provision & make configure
