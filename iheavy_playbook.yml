@@ -18,6 +18,7 @@
   - name: creates wpbackup dir
     file: path=/tmp/wpbackups state=directory
 
+# weekly backups using the wordpress cli export
   - cron:
       name=make_wp_backup 
       minute=0
@@ -26,6 +27,7 @@
       job="php /root/wp-cli.phar export --path=/var/www/html --dir=/tmp/wpbackups"
       state=present
 
+# copy wp backups to s3
   - cron: 
       name=copy_wp_backups
       minute=0 
@@ -34,7 +36,8 @@
       job="aws s3 sync /tmp/wpbackups s3://ihiwpbackups/" 
       state=present
 
-
+# add aws access key to wordpress
+# roles won't work with plugin without premium support
   - lineinfile:
       dest: /var/www/html/wp-config.php
       regexp: 'DBI_AWS_ACCESS_KEY_ID'
@@ -49,12 +52,14 @@
       state: present
       line: "define( \"DBI_AWS_SECRET_ACCESS_KEY\", \"{{ lookup('env','AS3CF_SECRET') }}\" );"
 
+# symlink to our EFS volume persistent files
   - file:
       src: /eternalfiles/files/
       dest: /var/www/html/files
       state: link
 
 
+# precreate sitemap files
   - file:
       path: /var/www/html/sitemap.xml
       owner: apache
@@ -63,7 +68,7 @@
       path: /var/www/html/sitemap.xml.gz
       owner: apache
 
-
+# our pingdom test verifies web & db end-to-end working
   - lineinfile:
       dest: /var/www/html/a_simple_pingdom_test.php
       regexp: '^\$DB_HOST'
