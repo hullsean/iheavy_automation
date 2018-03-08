@@ -41,3 +41,7 @@ o add automate tests
 - might add automated tests using docker.  We'll see!
 - need a test that verifies ssh connection (domain setup)
 - need test that verifies a_simple_pingdom_test.php works
+o need sitemap.xml test
+o need pingdom test
+o need backup test
+o need ssh test
