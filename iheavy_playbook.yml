@@ -56,6 +56,14 @@
       state: present
       line: "define( \"DBI_AWS_SECRET_ACCESS_KEY\", \"{{ lookup('env','AS3CF_SECRET') }}\" );"
 
+# add support for wp total cache
+  - lineinfile:
+      dest: /var/www/html/wp-config.php
+      regexp: "define('WP_CACHE', true);"
+      backrefs: no
+      state: present
+      line: "define('WP_CACHE', true);"
+
 # symlink to our EFS volume persistent files
   - file:
       src: /eternalfiles/files/
@@ -70,6 +78,10 @@
 
   - file:
       path: /var/www/html/sitemap.xml.gz
+      owner: apache
+
+  - file:
+      path: /var/www/html/.htaccess
       owner: apache
 
 # our pingdom test verifies web & db end-to-end working
@@ -93,3 +105,8 @@
       backrefs: no
       state: present
       line: "$DB_PASSWORD = \"{{ lookup('env','ihi_pass') }}\"; "
+
+
+
+
+      
