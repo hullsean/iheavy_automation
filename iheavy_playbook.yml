@@ -57,6 +57,7 @@
       line: "define( \"DBI_AWS_SECRET_ACCESS_KEY\", \"{{ lookup('env','AS3CF_SECRET') }}\" );"
 
 # add support for wp total cache
+# need to further test this
   - lineinfile:
       dest: /var/www/html/wp-config.php
       regexp: "define('WP_CACHE', true);"
