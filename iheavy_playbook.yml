@@ -2,6 +2,8 @@
 # configure iheavy.com server with relevant packages
 # after terraform finishes the provisioning process
 #
+# need to add support for SEO plugin
+#
 ---
 - hosts: all
   become: yes
@@ -107,7 +109,3 @@
       state: present
       line: "$DB_PASSWORD = \"{{ lookup('env','ihi_pass') }}\"; "
 
-
-
-
-      
