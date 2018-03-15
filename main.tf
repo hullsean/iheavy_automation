@@ -4,6 +4,10 @@ provider "aws" {
     
 }
 
+# 
+# provision main aws instance with fixed AMI
+# need to replace with packer build AMI
+#
 resource "aws_instance" "example" {
     ami = "ami-c58c1dd3"
     subnet_id = "${var.iheavy_subnet}"
@@ -20,6 +24,9 @@ resource "aws_instance" "example" {
     }
 }
 
+#
+# associate elastic IP automatically
+#
 resource "aws_eip_association" "eip_assoc" {
     instance_id   = "${aws_instance.example.id}"
     allocation_id = "${aws_eip.example.id}"
@@ -30,6 +37,10 @@ resource "aws_eip" "example" {
 }
 
 
+#
+# user data script for iheavy-iac
+# including variable replacements
+#
 data "template_file" "user_data" {
     template = "${file("iheavy-user-data.sh")}"
     vars {
