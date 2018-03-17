@@ -20,9 +20,12 @@
 	"wpackagist-plugin/amazon-s3-and-cloudfront":"1.1",
 	"wpackagist-plugin/amazon-web-services":"1.0",
 	"wpackagist-plugin/feedburner-plugin":"1.48",
+	"wpackagist-plugin/tracking-code":"1.1",
+	"wpackagist-plugin/maxbuttons":"*",
+        "wpackagist-plugin/simple-follow-me-social-buttons-widget":"3.3.3",
         "wpackagist-theme/hueman":"*",
 	"php": ">=5.3",
-	"johnpbloch/wordpress": "4.7.3"
+	"johnpbloch/wordpress": "4.9.2"
     },
     "autoload": {
         "psr-0": {
