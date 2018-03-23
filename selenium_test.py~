@@ -1,9 +1,3 @@
-#
-# simple selenium test
-# launch firefox & check homepage for
-# the string "Scalable Startups" and
-# return true if it is found
-#
 import unittest
 from selenium import webdriver
 from selenium.webdriver.common.keys import Keys
