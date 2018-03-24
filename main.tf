@@ -50,4 +50,7 @@ data "template_file" "user_data" {
     }
 }
 
+output "public_ip" {
+    value = "${aws_instance.example.public_ip}"
+}
 

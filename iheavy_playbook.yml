@@ -42,6 +42,21 @@
       job="aws s3 sync /tmp/wpbackups s3://ihiwpbackups/" 
       state=present
 
+# add external efs mount to /etc/fstab file
+  - lineinfile:
+      dest: /etc/fstab
+      regexp: '172.30.4.158'
+      backrefs: no
+      state: present
+      line: "172.30.4.158:/ /externalfiles nfs4 nfsvers=4.1,rsize=1048576,wsize=1048576,hard,timeo=600,retrans=2,_netdev 0 0"
+
+  - file:
+      path: /externalfiles
+      state: directory
+
+# mount the new volume in /etc/fstab
+  - shell: mount -a
+
 # add aws access key to wordpress
 # roles won't work with plugin without premium support
   - lineinfile:
@@ -72,19 +87,23 @@
       src: /eternalfiles/files/
       dest: /var/www/html/files
       state: link
+      force: yes
 
 
 # precreate sitemap files
   - file:
       path: /var/www/html/sitemap.xml
+      state: touch
       owner: apache
 
   - file:
       path: /var/www/html/sitemap.xml.gz
+      state: touch
       owner: apache
 
   - file:
       path: /var/www/html/.htaccess
+      state: touch
       owner: apache
 
 # our pingdom test verifies web & db end-to-end working
