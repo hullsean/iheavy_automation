@@ -83,12 +83,12 @@
       line: "define('WP_CACHE', true);"
 
 # symlink to our EFS volume persistent files
+# this is broken need to fix!!
   - file:
-      src: /eternalfiles/files/
       dest: /var/www/html/files
+      src: /eternalfiles/files/
       state: link
       force: yes
-
 
 # precreate sitemap files
   - file:
