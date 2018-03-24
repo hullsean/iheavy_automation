@@ -1,4 +1,6 @@
 # iheavy_automation
+#
+# need to add test to verify /externalfiles mounted
 
 Basic build scripts for iheavy.com wordpress site.
 Manage wordpress software & module install versions via php composer.
