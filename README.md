@@ -4,6 +4,7 @@
 # need a test to test for broken links
 # need a test to verify plugins
 # need a test to verify content uploads
+# need a test for site performance grade
 #
 # site ping test - DONE
 #
