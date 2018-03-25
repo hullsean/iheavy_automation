@@ -1,6 +1,12 @@
 # iheavy_automation
 #
-# need to add test to verify /externalfiles mounted
+# need a test to verify /externalfiles/files downloads
+# need a test to test for broken links
+# need a test to verify plugins
+# need a test to verify content uploads
+#
+# site ping test - DONE
+#
 
 Basic build scripts for iheavy.com wordpress site.
 Manage wordpress software & module install versions via php composer.
