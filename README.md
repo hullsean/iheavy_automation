@@ -5,6 +5,8 @@
 # need a test to verify plugins
 # need a test to verify content uploads
 # need a test for site performance grade
+# need edit Makefile to run tests
+# need to move the tfstate file to s3 bucket
 #
 # site ping test - DONE
 #
