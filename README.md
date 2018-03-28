@@ -8,6 +8,7 @@
 # need edit Makefile to run tests
 # need to move the tfstate file to s3 bucket
 # need to move the terraform tfstate file to S3 bucket
+# additional tests go here
 # 
 # site ping test - DONE
 #
