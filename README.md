@@ -1,5 +1,5 @@
 # iheavy_automation
-#
+# 
 # need a test to verify /externalfiles/files downloads
 # need a test to test for broken links
 # need a test to verify plugins
@@ -7,7 +7,8 @@
 # need a test for site performance grade
 # need edit Makefile to run tests
 # need to move the tfstate file to s3 bucket
-#
+# need to move the terraform tfstate file to S3 bucket
+# 
 # site ping test - DONE
 #
 
