@@ -10,6 +10,10 @@
 # need to move the terraform tfstate file to S3 bucket
 # additional tests go here
 # where is the yoast SEO plugin??
+# also want to port to nginx.  that should be quick & easy
+# - add nginx role to server
+# - configure our modules
+# - configure our domains
 # 
 # site ping test - DONE
 #
