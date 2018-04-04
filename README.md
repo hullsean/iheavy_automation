@@ -63,3 +63,6 @@ o need sitemap.xml test
 o need pingdom test
 o need backup test
 o need ssh test
+o port to nginx
+o add elasticache redis support
+o add CDN configuration & support
