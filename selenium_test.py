@@ -4,6 +4,11 @@
 # the string "Scalable Startups" and
 # return true if it is found
 #
+# need to add timing & response check to this
+# otherwise create a new selenium check for
+# that.
+#
+
 import unittest
 from selenium import webdriver
 from selenium.webdriver.common.keys import Keys
