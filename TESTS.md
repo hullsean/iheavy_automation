@@ -10,6 +10,7 @@
 # need a test to verify content uploads
 # need a test for site performance grade
 # need a test to scan repo for credentials
+# need a test to scan for plugin or wp updates
 # need edit Makefile to run tests
 # need to move the tfstate file to s3 bucket
 # need to move the terraform tfstate file to S3 bucket
