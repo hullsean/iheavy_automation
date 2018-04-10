@@ -1,0 +1,10 @@
+---
+- hosts: all
+  gather_facts: no
+  connection: local
+  tasks:
+    - include: ldSettings.yml
+    - include: doStack.yml
+      vars:
+        stack_state: present
+

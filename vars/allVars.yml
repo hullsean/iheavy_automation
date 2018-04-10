@@ -1,0 +1,10 @@
+---
+
+project_name: 'iheavy-stack'
+
+project_owner: "ihi"
+
+project_lifetime: "long"
+
+aws_region: "us-east-1"
+
