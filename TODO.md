@@ -13,6 +13,7 @@
 # o move off of cloudflare, deploy own SSL certificate
 # o add ssl expiration monitor
 # o migrate to bastion host deployed with terraform
+# o breakup code into roles, handlers, variables etc.
 
 # o add jenkins build server
 # o try github-ci build server
