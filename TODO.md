@@ -14,12 +14,14 @@
 # o add ssl expiration monitor
 # o migrate to bastion host deployed with terraform
 # o breakup code into roles, handlers, variables etc.
+# o deploy the vpc with terraform
+# o configure security group with terraform
 
 # o add jenkins build server
 # o try github-ci build server
 # o try aws codepipeline
 # o try travis
-# o try circleci
+# o try circleci self-hosted
 # o compare & contrast each of these in blog post
 
 # o need to add yoast SEO plugin
