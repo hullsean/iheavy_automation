@@ -54,3 +54,13 @@ output "public_ip" {
     value = "${aws_instance.example.public_ip}"
 }
 
+
+
+terraform {
+  backend "s3" {
+    bucket = "iheavy-state"
+    key    = "terraform.tfstate"
+    region = "us-east-1"
+    encrypt = true
+  }
+}
