@@ -16,7 +16,9 @@
 # o breakup code into roles, handlers, variables etc.
 # o deploy the vpc with terraform
 # o configure security group with terraform
-
+# o update terraform outputs
+# o integrate ansible create/destroy stack script
+#
 # o add jenkins build server
 # o try github-ci build server
 # o try aws codepipeline
