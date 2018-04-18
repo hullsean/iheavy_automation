@@ -37,3 +37,5 @@ Steps to Rebuild IHEAVY.COM
 8. test a_simple_pingdom_test.php
 
 
+
+# test line after changing git credentials helper
