@@ -39,3 +39,4 @@ Steps to Rebuild IHEAVY.COM
 
 
 # test line after changing git credentials helper
+# another test line after fixing macosx credentials helper
