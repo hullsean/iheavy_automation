@@ -19,7 +19,8 @@
 # o configure security group with terraform
 # o update terraform outputs
 # o integrate ansible create/destroy stack script
-#
+# o configure mutual TLS ??
+# 
 # o add jenkins build server
 # o try github-ci build server
 # o try aws codepipeline
