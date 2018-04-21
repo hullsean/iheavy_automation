@@ -19,7 +19,7 @@
 # o configure security group with terraform
 # o update terraform outputs
 # o integrate ansible create/destroy stack script
-# o configure mutual TLS ??
+# o configure mutual TLS or TLS termination with nginx
 # 
 # o add jenkins build server
 # o try github-ci build server
