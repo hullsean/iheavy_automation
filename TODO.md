@@ -20,6 +20,8 @@
 # o update terraform outputs
 # o integrate ansible create/destroy stack script
 # o configure mutual TLS or TLS termination with nginx
+# o rebuild site into custom VPC? 
+# o rebuild site with own bastion box to reach private subnets
 # 
 # o add jenkins build server
 # o try github-ci build server
