@@ -39,5 +39,6 @@
 # inbound research
 # keywords research
 # opsline.com COPY edit
+# kogan copy edit
 # testimonials icons
 
