@@ -41,4 +41,6 @@
 # opsline.com COPY edit
 # kogan copy edit
 # testimonials icons
+# try out leadpages.net
+# try out unbounce.com
 
