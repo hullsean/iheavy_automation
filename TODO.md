@@ -31,6 +31,7 @@
 # o compare & contrast each of these in blog post
 
 # o need to add yoast SEO plugin
+#   - need to add meta desc & meta tags to posts
 # o scan for images without alt text
 # o scan for pages missing meta description
 
@@ -46,3 +47,4 @@
 
 # real inbound link building
 # work on copyediting & style
+# try various new themes
