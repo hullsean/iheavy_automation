@@ -28,7 +28,7 @@
 # o need pingdom test
 # o need backup test
 # o need ssh test
-# 
+# o add in awspec tests for infra code
 
 # site ping test - DONE
 #
