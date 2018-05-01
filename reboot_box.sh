@@ -1,7 +1,7 @@
 #!/bin/sh
 
 
-export instance_id = i-05e9dce2e0a1530e2
+export instance_id=i-05e9dce2e0a1530e2
 
 # get instance id
 # aws ec2 describe-instances | grep tag name = iheavy-iac
