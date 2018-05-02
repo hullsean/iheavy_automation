@@ -29,6 +29,9 @@
 # o need backup test
 # o need ssh test
 # o add in awspec tests for infra code
+# o use mbtest to mock serivce (rds or redis?)
+# o use docs.pact.io for testing
+#
 
 # site ping test - DONE
 #
