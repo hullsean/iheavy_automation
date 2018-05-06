@@ -23,6 +23,7 @@
 # o rebuild site into custom VPC? 
 # o rebuild site with own bastion box to reach private subnets
 # 
+# AUTOMATE ALL THE THINGS
 # o add jenkins build server
 # o try github-ci build server
 # o try aws codepipeline
