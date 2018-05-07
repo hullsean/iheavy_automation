@@ -29,13 +29,14 @@ Steps to Rebuild IHEAVY.COM
 1. update iheavy/composer.json to change any versions
 2. git commit -am "updated version x of php package"
 - need to test.  does this still use codecommit version of ihi infra?
+- answer: yes :)
 3. git push origin master (need to move this repo to github)
 4. make test (runs terraform plan)
 5. make provision (runs terraform apply)
 6. make configure (runs ansible-playbook)
 7. test upload media to wp
 8. test a_simple_pingdom_test.php
-
+9. these tests should be *automated*
 
 
 # test line after changing git credentials helper
