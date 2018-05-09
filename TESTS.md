@@ -29,6 +29,9 @@
 # o need backup test
 # o need ssh test
 # o add in awspec tests for infra code
+# * terratest from gruntwork
+# * others...
+#
 # o use mbtest to mock serivce (rds or redis?)
 #  -- this mocking service mountebank seems very interesting
 #  -- potentially very very useful
