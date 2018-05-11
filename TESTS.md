@@ -31,6 +31,7 @@
 # o add in awspec tests for infra code
 # * terratest from gruntwork
 # * use cred-alert or other tool to scan repo for credentials
+# * possibly use testinfra to verify compontes
 # * others...
 #
 # o use mbtest to mock serivce (rds or redis?)

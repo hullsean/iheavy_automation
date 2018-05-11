@@ -12,6 +12,7 @@
 # o add ELB & autoscaling group
 # o test site with geo & latency dns
 # o move off of cloudflare, deploy own SSL certificate
+#   - add elb, listener, target, etc
 # o add ssl expiration monitor
 # o migrate to bastion host deployed with terraform
 # o breakup code into roles, handlers, variables etc.
