@@ -46,6 +46,8 @@
 # testimonials icons
 # try out leadpages.net
 # try out unbounce.com
+# integrate asciinema terminal demo
+#
 
 #
 # real inbound link building
