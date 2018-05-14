@@ -29,7 +29,7 @@
 # o need backup test
 # o need ssh test
 # o add in awspec tests for infra code
-# * terratest from gruntwork
+# * terratest from gruntwork - recommended by last week in aws
 # * use cred-alert or other tool to scan repo for credentials
 # * possibly use testinfra to verify compontes
 # * others...
