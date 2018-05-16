@@ -2,9 +2,9 @@
 # 
 # #### REPO NOTES ####
 #
-Basic build scripts for iheavy.com wordpress site.
-Manage wordpress software & module install versions via php composer.
-wpackagist is a repository managing wordpress plugins.
+* Basic build scripts for iheavy.com wordpress site.
+* Manage wordpress software & module install versions via php composer.
+- wpackagist is a repository managing wordpress plugins.
 
 
 * Required packages & versions in composer.json.  These include all of
@@ -37,7 +37,5 @@ options.  make all does all of them together.  :)
 7. test upload media to wp
 8. test a_simple_pingdom_test.php
 9. these tests should be *automated*
+- see TESTS.md for details
 
-
-# test line after changing git credentials helper
-# another test line after fixing macosx credentials helper
