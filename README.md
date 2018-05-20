@@ -26,7 +26,8 @@ options.  make all does all of them together.  :)
 
 * Steps to Rebuild IHEAVY.COM
 
-1. update iheavy/composer.json to change any versions
+1. update iheavy/composer.json to change any versions 
+- still using the codecommit version, need to switch to github & test
 2. git commit -am "updated version x of php package"
 - need to test.  does this still use codecommit version of ihi infra?
 - answer: yes :)
