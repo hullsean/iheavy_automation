@@ -1,11 +1,16 @@
 #
 # #### TODO ####
 #
-# o  Given *VERSION*, one script will completely assemble & test site
-# o add swapfile with ansible
-# o add autoscaling group
-# o add ELB
-# o post commit hook to blue/green test infra
+
+* o update wordpress plugins
+* o update wordpress version
+* o troubleshoot recent weekly lockups
+*
+* o  Given *VERSION*, one script will completely assemble & test site
+* o add swapfile with ansible
+* o add autoscaling group
+* o add ELB
+* o post commit hook to blue/green test infra
 # o port to nginx
 # o add elasticache redis support
 # o add CDN configuration & support

@@ -1,7 +1,7 @@
 # iheavy_automation
-# 
-# #### REPO NOTES ####
-#
+ 
+* #### REPO NOTES ####
+
 * Basic build scripts for iheavy.com wordpress site.
 * Manage wordpress software & module install versions via php composer.
 - wpackagist is a repository managing wordpress plugins.
