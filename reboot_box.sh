@@ -32,7 +32,7 @@ aws ec2 stop-instances --instance-ids $instance_id
 # check status
 # aws ec2 describe-instances | grep "State = stopped"
 # we'll just wait 2 minutes.  likely it is stopped by then. :)
-sleep 120
+sleep 300
 
 #
 # to start instance
