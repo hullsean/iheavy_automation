@@ -1,6 +1,7 @@
 #!/bin/sh
 
 
+
 #export instance_id=i-05e9dce2e0a1530e2
 
 # look up the instance_id based on tag of "iheavy-iac"
@@ -15,18 +16,17 @@ export instance_id=`aws ec2 describe-instances --filter Name=tag:Name,Values=ihe
 #
 # hack for now...
 #
-#aws ec2 reboot-instances --instance-ids $instance_id
-
-
-# this script should:
-# find the instance-id by tag name=iheavy-iac
-# then run above command by variable
+if [ $1 eq "reboot" ]; then
+    echo "using aws ec2 reboot-instances ..."
+    aws ec2 reboot-instances --instance-ids $instance_id
+fi 
 
 # need cli switch to do stop/start cycle
 # that option needs to loop until the instance is stopped
 # so it's a bit trickier
 
 # to stop:
+echo "STOPPING instance: $instance_id ..."
 aws ec2 stop-instances --instance-ids $instance_id
 
 # check status
@@ -36,6 +36,7 @@ sleep 300
 
 #
 # to start instance
+echo "STARTING instance: $instance_id ..."
 aws ec2 start-instances --instance-ids $instance_id
 
 
