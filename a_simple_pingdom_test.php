@@ -1,4 +1,3 @@
-
 <!--This is test page used by pingdom.com to check the server status-->
 <html>
 <title>Iheavy.com</title>
@@ -9,14 +8,9 @@
 // MySQL server configuration
 // *******************************
 
-// these are placeholders for host, user & pass
-// ansible will later fill them in with the correct
-// db hostname, user & pass based on environment
-// variables and/or prompting
-//
-$DB_HOST         = 'localhost'; // Database host
-$DB_USERNAME = 'xxxx';  // Database username
-$DB_PASSWORD = 'yyyy';  // Database password
+$DB_HOST = "ihi-rds.ckiwwtljakfu.us-east-1.rds.amazonaws.com"; 
+$DB_USERNAME = "root"; 
+$DB_PASSWORD = "sean9999"; 
 
 // Get start time for the execution timer
 // Execution time code from http://www.developerfusion.com
@@ -26,7 +20,7 @@ $mtime = $mtime[1] + $mtime[0];
 $starttime = $mtime;
 
 // Check MySQL using the provided connection information
-if ($db = mysql_connect($DB_HOST, $DB_USERNAME, $DB_PASSWORD))
+if ($db = mysqli_connect($DB_HOST, $DB_USERNAME, $DB_PASSWORD))
         $mysqlStatus = 'OK';
 else
         {$mysqlStatus = 'MySQL DOWN';
@@ -40,11 +34,11 @@ $endtime = $mtime;
 $totaltime = round(($endtime - $starttime) * 1000, 3); // Time in milliseconds
 
 
-mysql_select_db("test",$db)
+mysqli_select_db($db, "test")
 or die('Could not select a database.');
 // display mysql date/time
-$result=mysql_query("SELECT now()");
-$row=mysql_fetch_row($result);
+$result=mysqli_query("SELECT now()");
+$row=mysqli_fetch_row($result);
 echo "<b> MySQL says the time is $row[0]  Status: </b>";
 
 // *******************************
