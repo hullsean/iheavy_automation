@@ -1,7 +1,7 @@
 
 variable "iheavy_size" {
     description = "aws instance size to spinup"
-    default = "t2.small"
+    default = "t2.medium"
 }
 
 variable "iheavy_subnet" {

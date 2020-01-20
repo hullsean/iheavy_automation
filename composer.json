@@ -9,23 +9,21 @@
     ],
     "require": {
         "aws/aws-sdk-php":"*",
-	"wpackagist-plugin/medium":"1.4.0",
-        "wpackagist-plugin/google-sitemap-generator":"3.2.9",
-        "wpackagist-plugin/amp":"0.3.1",
+        "wpackagist-plugin/google-sitemap-generator":"4.1.0",
+        "wpackagist-plugin/amp":"1.4.2",
 	"wpackagist-plugin/w3-total-cache":"0.9.3",
 	"wpackagist-plugin/wordpress-importer":"0.6.1",
 	"wpackagist-plugin/yet-another-related-posts-plugin":"4.0.7",
-	"wpackagist-plugin/better-wp-security":"5.3.7",
-	"wpackagist-plugin/disqus-comment-system":"2.74",
-	"wpackagist-plugin/amazon-s3-and-cloudfront":"1.1",
+	"wpackagist-plugin/better-wp-security":"7.6.1",
+	"wpackagist-plugin/disqus-comment-system":"3.0.17",
+	"wpackagist-plugin/amazon-s3-and-cloudfront":"2.3.2",
 	"wpackagist-plugin/amazon-web-services":"1.0",
-	"wpackagist-plugin/feedburner-plugin":"1.48",
-	"wpackagist-plugin/tracking-code":"1.1",
+	"wpackagist-plugin/tracking-code":"1.1.0",
 	"wpackagist-plugin/maxbuttons":"*",
         "wpackagist-plugin/simple-follow-me-social-buttons-widget":"3.3.3",
         "wpackagist-theme/hueman":"*",
 	"php": ">=5.3",
-	"johnpbloch/wordpress": "4.9.2"
+	"johnpbloch/wordpress": "5.3.2"
     },
     "autoload": {
         "psr-0": {

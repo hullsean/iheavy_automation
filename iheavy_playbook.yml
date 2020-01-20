@@ -5,7 +5,7 @@
 # need to add support for Yoast SEO plugin
 #
 ---
-- hosts: all
+- hosts: iheavy
   become: yes
 
   tasks:
