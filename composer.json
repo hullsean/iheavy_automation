@@ -21,6 +21,8 @@
 	"wpackagist-plugin/tracking-code":"1.1.0",
 	"wpackagist-plugin/maxbuttons":"*",
         "wpackagist-plugin/simple-follow-me-social-buttons-widget":"3.3.3",
+	"wpackagist-plugin/health-check":"1.4.2",
+	"wpackagist-plugin/classic-editor":"1.5",
         "wpackagist-theme/hueman":"*",
 	"php": ">=5.3",
 	"johnpbloch/wordpress": "5.3.2"
