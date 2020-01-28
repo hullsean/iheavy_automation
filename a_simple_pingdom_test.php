@@ -20,7 +20,7 @@ $mtime = $mtime[1] + $mtime[0];
 $starttime = $mtime;
 
 // Check MySQL using the provided connection information
-if ($db = mysqli_connect($DB_HOST, $DB_USERNAME, $DB_PASSWORD))
+if ($db = mysqli_connect($DB_HOST, $DB_USERNAME, $DB_PASSWORD, "test"))
         $mysqlStatus = 'OK';
 else
         {$mysqlStatus = 'MySQL DOWN';
@@ -34,10 +34,10 @@ $endtime = $mtime;
 $totaltime = round(($endtime - $starttime) * 1000, 3); // Time in milliseconds
 
 
-mysqli_select_db($db, "test")
-or die('Could not select a database.');
+#mysqli_select_db($db, "test")
+#or die('Could not select a database.');
 // display mysql date/time
-$result=mysqli_query("SELECT now()");
+$result=mysqli_query($db, "SELECT now()");
 $row=mysqli_fetch_row($result);
 echo "<b> MySQL says the time is $row[0]  Status: </b>";
 
