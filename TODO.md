@@ -59,3 +59,16 @@
 # work on copyediting & style
 # try various new themes
 #
+
+
+# added bunch of new stuff with wordpress update
+# new composter plugins added to composer.json
+# health-check
+# classic-editor
+#
+# new yum packages added 
+# php73-bcmath
+# php72-pecl-imagick
+# php73-gd
+# php73-mbstring
+# 
